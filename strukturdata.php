@@ -1,20 +1,9 @@
+$S = [2, 1, 6, 9, 9, 4, 3];
 
-function BubbleSort($arr) {
+$unique_numbers = array_unique($S);
 
-    $n = sizeof($arr);
+sort($unique_numbers);
 
-    for($i = 0; $i < $n; $i++) {
+$second_big_number = $unique_numbers[count($unique_numbers - 2)];
 
-        for($j = 0; $j < $n - $i - 1; $j++) {
-
-            if($arr[$j] > $arr[$j + 1]) {
-                
-                $temp = $arr[$j];
-
-                $arr[$j] = $arr[$j + 1];
-
-                $arr[$j + 1] = $temp;
-            }
-        }
-    }
-}
+echo $second_big_number;
